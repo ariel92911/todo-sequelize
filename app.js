@@ -50,6 +50,9 @@ app.get('/users/logout', (req, res) => {
   res.send('logout')
 })
 
+// 使用路由器
+app.use('/users', require('./routes/user'))
+
 // 設定 express port 3000
 app.listen(port, () => {
   console.log(`App is running on port ${port}!`)
